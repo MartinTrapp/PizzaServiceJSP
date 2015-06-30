@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+    <context-param>
+        <param-name>SQL_URL</param-name>
+        <param-value>jdbc:mysql://localhost/du16</param-value>
+    </context-param>
+    <context-param>
+        <param-name>SQL_User</param-name>
+        <param-value>du16</param-value>
+    </context-param>
+    <context-param>
+        <param-name>SQL_Password</param-name>
+        <param-value>x+8C</param-value>
+    </context-param>
+    
+    
+    <servlet>
+        <servlet-name>basket</servlet-name>
+        <servlet-class>app.controller.BasketController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>app.controller.OrderController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CatController</servlet-name>
+        <servlet-class>admin.controller.CatController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductController</servlet-name>
+        <servlet-class>admin.controller.ProductController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderControl</servlet-name>
+        <servlet-class>admin.controller.OrderControl</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>basket</servlet-name>
+        <url-pattern>/basket</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/order</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CatController</servlet-name>
+        <url-pattern>/backend/CatControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductController</servlet-name>
+        <url-pattern>/backend/PControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderControl</servlet-name>
+        <url-pattern>/backend/Order</url-pattern>
+    </servlet-mapping>
+</web-app>
